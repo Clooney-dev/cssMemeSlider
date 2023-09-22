@@ -1,0 +1,192 @@
+body {
+  background-color: rgb(122, 71, 3);
+}
+
+.slider_title {
+  font-family: Shadows Into Light;
+  font-size: 61px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0;
+  text-align: center;
+}
+
+.slider {
+  width: 720px;
+  height: 395px;
+  border-radius: 1%;
+  background-color: aliceblue;
+  margin: 80px auto;
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label:before,
+input[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 290px;
+  top: 425px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #00aeff;
+  background-color: #00aeff;
+  border-radius: 100%;
+}
+
+input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after {
+  left: 292px;
+  top: 427px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: rgb(122, 71, 4);
+}
+
+input[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+input[type="radio"]:checked + label:after {
+  opacity: 1;
+}
+
+.slider_slide1 {
+  background-image: url(../it-meme-1.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  opacity: 0;
+}
+
+.slider_slide2 {
+  background-image: url(../it-meme-2.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  opacity: 0;
+}
+
+.slider_slide3 {
+  background-image: url(../it-meme-3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0;
+}
+
+.slider_slide4 {
+  background-image: url(../it-meme-4.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  opacity: 0;
+}
+
+.slider_slide1,
+.slider_slide2,
+.slider_slide3,
+.slider_slide4 {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: 1%;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px black;
+}
+
+#slide1:checked ~ .slider_slide1 {
+  opacity: 1;
+  box-shadow: 0px 0px 5px red;
+  transition: all 0.5s ease-in-out;
+}
+
+#slide2:checked ~ .slider_slide2 {
+  opacity: 1;
+  box-shadow: 0px 0px 5px red;
+  transition: all 0.5s ease-in-out;
+}
+
+#slide3:checked ~ .slider_slide3 {
+  opacity: 1;
+  box-shadow: 0px 0px 5px red;
+  transition: all 0.5s ease-in-out;
+}
+
+#slide4:checked ~ .slider_slide4 {
+  opacity: 1;
+  box-shadow: 0px 0px 5px red;
+  transition: all 0.5s ease-in-out;
+}
+
+.slide_ctrls {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
+
+input[type="radio"]:not(:checked):hover + label:before,
+input[type="radio"]:not(:checked):hover + label:after {
+  background-color: aliceblue;
+  border: none;
+}
+
+.slider > p {
+  font-family: Shadows Into Light;
+  font-size: 61px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0;
+  position: absolute;
+  right: 31%;
+  top: 9em;
+}
+
+.p1,
+.p2,
+.p3,
+.p4 {
+  opacity: 0;
+}
+
+#slide1:checked ~ .p1 {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+#slide2:checked ~ .p2 {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+#slide3:checked ~ .p3 {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+#slide4:checked ~ .p4 {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+
